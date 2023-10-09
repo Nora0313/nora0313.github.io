@@ -72,4 +72,24 @@
 很多字符需要转义，用`\`转义
 
 ## 九、代码块
-使用四个空格缩进表示代码块
+使用四个空格缩进表示代码块，或者前后加上三个\`
+
+
+    public class Helloworld
+    {
+        public static void main(String[] args)
+        {
+            System.outsprintln( "Hello, World!" );
+            }
+    }
+
+
+```
+public class Helloworld
+{
+    public static void main(String[] args)
+    {
+        System.outsprintln( "Hello, World!" );
+    }
+}
+```
