@@ -16,6 +16,14 @@
     
     cut -d ";" -f 2 file_name     # 以分号作为输入字段的分隔符（默认为制表符），取出第 2 列
 
+`grep`
+
+    grep 'CDS' file_name       #显示匹配上 'CDS' 的所有行
+    
+    grep -v 'CDS' file_name    #显示没有匹配上'CDS'的所有行
+    
+    grep -w 'gene' file_name    # 必须与整个字匹配
+
 `sed` 编辑文件
 
     sed 's/a/A/g' file_name     #将文件中所有的 a 替换为 A
@@ -23,6 +31,14 @@
     sed -n '3,6 p' file_name    #打印第3到6行
     
     sed '2 q' file_name         #打印前2行
+
+`awk`
+
+
+>Linux 文本操作的三大神器：grep、sed、awk，各自的最佳应用场景：
+>>grep：使用正则表达式搜索文本，并把匹配的行打印出来，是强大的文本搜索工具；
+>>sed：用于编辑匹配到的文本，是一种流编辑器；
+>>awk：能够对文本进行复杂的格式处理，是一种处理文本的语言。
 
 `chmod`
 
@@ -36,12 +52,3 @@ r 表示可读，w 表示可写，x 表示可执行
 用数字表示：可读 r=4，可写 w=2，可执行 x=1
 
 例如：755 表示文件所有者对文件具有可读、可写、可执行权限，其他用户只具有可读、可执行权限。
-
-`grep`
-
-    grep 'CDS' file_name       #显示匹配上 'CDS' 的所有行
-    
-    grep -v 'CDS' file_name    #显示没有匹配上'CDS'的所有行
-    
-    grep -w 'gene' file_name    # 必须与整个字匹配
-
