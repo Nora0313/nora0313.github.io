@@ -16,6 +16,7 @@ sed 's/chr_/chromosome_/g' test_command.gtf | cut -f 1,3,4,5 > cut.gtf
 awk '{t = $3; $3 = $2; $2 = t; print $0}' test_command.gtf | sort -k 4 -k 5 -n > result.gtf
 ```
 
+## 2.2 Practice
 
 
 
