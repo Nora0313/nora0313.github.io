@@ -3,5 +3,45 @@
 `cp`
 
     cp old_file old_file2 # 复制文件
+   
     cp -r old_folder old_folder2  # 复制文件夹，需要加上 -r
+
+`mv` 移动
+
+    mv old_file new_file # 重命名
+
+`cut` 取出文件中的特定列或字符
+
+    cut -f 4 file_name            #取出第 4 列
+    
+    cut -d ";" -f 2 file_name     # 以分号作为输入字段的分隔符（默认为制表符），取出第 2 列
+
+`sed` 编辑文件
+
+    sed 's/a/A/g' file_name     #将文件中所有的 a 替换为 A
+    
+    sed -n '3,6 p' file_name    #打印第3到6行
+    
+    sed '2 q' file_name         #打印前2行
+
+`chmod`
+
+    chmod 755 file_name
+    
+    chmod -R 755 cp_folder     # -R  修改该目录中所有文件的权限
+
+三位数分别表示文件所有者，用户组，其他人
+r 表示可读，w 表示可写，x 表示可执行
+
+用数字表示：可读 r=4，可写 w=2，可执行 x=1
+
+例如：755 表示文件所有者对文件具有可读、可写、可执行权限，其他用户只具有可读、可执行权限。
+
+`grep`
+
+    grep 'CDS' file_name       #显示匹配上 'CDS' 的所有行
+    
+    grep -v 'CDS' file_name    #显示没有匹配上'CDS'的所有行
+    
+    grep -w 'gene' file_name    # 必须与整个字匹配
 
