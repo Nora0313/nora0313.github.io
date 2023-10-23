@@ -51,6 +51,7 @@ awk的默认分隔符是空格和制表符，上面的例子中，若希望把�
 
     sort -k 5 file_name           # 按照第 5 列排序 (ASCII码顺序, 10<2)
     sort -k 5 -n file_name        # 按照第 5 列排序 (ASCII数值顺序, 10>2)
+- [小教程](https://www.coder4.com/archives/2629)
 
 `chmod`
 
